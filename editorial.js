@@ -1,0 +1,26 @@
+const italianCopy={
+ "Storage ed elaborazione":"Conservazione ed elaborazione dei dati",
+ "Serving e sicurezza":"Accesso ai dati e sicurezza",
+ "Esercizio e capacità":"Gestione operativa e dimensionamento",
+ "Stream processing":"Elaborazione degli eventi",
+ "Consumer operativo dedicato":"Applicazione che riceve gli eventi",
+ "Producer o endpoint di ingestione":"Applicazione o indirizzo che riceve gli eventi",
+ "Dashboard BI":"Report e dashboard BI",
+ "Chiave univoca e MERGE idempotente":"Chiave univoca e MERGE che si può ripetere senza duplicati",
+ "Stack di riferimento":"Piattaforma cloud di riferimento",
+ "Orchestrazione e deploy":"Orchestrazione e rilascio",
+ "Raw / replay":"Dati originali e rielaborazione",
+ "Tabelle curate":"Tabelle pronte all’uso",
+ "Consumo":"Utilizzo dei dati",
+ "Serving rapido":"Accesso a bassa latenza",
+ "Percorso analitico e riconciliazione":"Flusso di analisi e riconciliazione dei dati",
+ "Percorso batch o microbatch":"Elaborazione a lotti",
+ "Storage raw logico":"Volume dei dati originali, prima della compressione",
+ "Throughput batch richiesto":"Velocità di elaborazione necessaria per il batch",
+ "Picco sugli eventi":"Volume di traffico al picco",
+ "Worker Spark ipotetici":"Numero stimato di worker Spark",
+ "Compute worker ipotetico":"vCPU stimate per i worker",
+ "Fattore fisico raw":"Rapporto tra spazio occupato e volume originale",
+ "Ingresso giornaliero noto":"Volume giornaliero in ingresso"
+};
+const naturalItalian=value=>italianCopy[value]??value;

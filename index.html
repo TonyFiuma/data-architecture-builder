@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Trasforma i requisiti in un diagramma di architettura dati e in un documento con le motivazioni tecniche.">
+<title>Data Architecture Builder</title>
+<meta name="author" content="Antonio Fiumanò">
+<link rel="stylesheet" href="style.css">
+<script defer src="questions.js"></script><script defer src="editorial.js"></script><script defer src="locale.js"></script><script defer src="design.js"></script><script defer src="additions.js"></script><script defer src="exports.js"></script><script defer src="help.js"></script><script defer src="calculator-help.js"></script><script defer src="implementation-examples.js"></script><script defer src="learning.js"></script><script defer src="technology-icons.js"></script><script defer src="visual-flow.js"></script><script defer src="platforms.js"></script><script defer src="recommendations.js"></script><script defer src="storage-plan.js"></script><script defer src="medallion.js"></script><script defer src="technology-preferences.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+<header class="top"><div class="top-inner"><a class="brand" href="./"><span class="mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span> Data Architecture Builder</a><div class="top-actions"><button type="button" id="resetAll" class="header-reset">Reset completo</button><label class="language-selector"><span id="languageLabel">Lingua</span><select id="language" aria-label="Lingua / Language"><option value="it">Italiano</option><option value="en">English</option></select></label></div></div></header>
+<main class="shell">
+ <div class="intro"><h1>Progetta una piattaforma dati</h1><p>Seleziona le risposte del cliente. Ottieni il diagramma e un documento Word con le motivazioni tecniche.</p></div>
+ <div class="tabs"><button id="questionTab" type="button" class="secondary"></button><button id="calculatorTab" type="button" class="secondary"></button></div>
+ <div class="notice" id="notice" role="status" hidden></div>
+ <section id="setup" class="setup" aria-label="Configurazione">
+  <label>Nome del progetto <input id="project" placeholder="Es. Piattaforma prenotazioni" maxlength="120"></label>
+  <label hidden>Stack di riferimento <select id="cloud"></select></label>
+  <label><span id="biLabel">Strumento BI di riferimento</span><select id="biReference"></select></label>
+  <label>Esempi dalle slide <select id="example"><option value="">Scegli uno scenario</option><option value="hotel">Prenotazioni alberghiere · GCP</option><option value="erp">Replica ERP · Azure Databricks</option><option value="iot">Telemetria · AWS</option></select></label>
+  <button class="secondary setup-action" id="exampleButton" type="button">Carica esempio</button>
+ </section>
+ <details id="technology" class="result-card technology"></details>
+ <section id="calculator" class="result-card calculator" hidden></section>
+ <div id="workspace" class="workspace">
+  <aside class="sidebar" aria-label="Avanzamento">
+   <div class="progress-card"><div class="progress-line"><strong>Avanzamento</strong><span id="progressText"></span></div><progress id="progress"></progress></div>
+   <nav id="sections" aria-label="Sezioni del questionario"></nav>
+   <p class="local-note">La bozza resta in questo browser.</p>
+  </aside>
+  <section class="editor" id="editor" aria-label="Questionario">
+   <div class="question-layout"><div id="question"></div><aside id="reference"></aside></div>
+   <div class="controls"><button id="prev" class="secondary" type="button">Indietro</button><button id="next" class="primary" type="button">Avanti</button></div>
+   <section id="questionResources" class="question-resources"></section>
+  </section>
+ </div>
+ <section id="result" class="result" hidden></section>
+ <footer><span>Antonio Fiumanò</span><span>GCP · Azure · AWS · Databricks</span></footer>
+</main>
+<dialog id="questionHelpDialog" aria-labelledby="helpTitle"><form method="dialog"><button id="closeHelp" class="secondary" autofocus>Chiudi</button></form><h2 id="helpTitle"></h2><div id="helpContent"></div></dialog>
+<noscript>Attiva JavaScript per compilare il questionario e generare l’architettura.</noscript>
+</body>
+</html>
